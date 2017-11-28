@@ -84,3 +84,24 @@ ecrire( minimum( [3,9,2,4,-5,24] ) );
 
 ecrire( Math.min(3,9,2,4) );
 ecrire( Math.min(...[3,9,2,4]) );
+
+
+function sapin(taille){
+    var pied;
+    for (var i = 1; i <= taille; i++) {
+        var branche = "";
+        for(var j = 0; j < taille - i; j++){
+            branche = branche + " ";
+        }
+        for(var j = 0; j < (2*i-1); j++){
+            branche = branche + "*";
+        }
+        ecrire(branche);
+        if(i == 1) pied = branche;
+    }
+    ecrire(pied);
+}
+
+sapin(3);
+ecrire();
+sapin(5);
