@@ -4,6 +4,9 @@ function ecrire(texte) {
 }
 function lire(texte) {
 	var saisie = prompt(texte);
+	if(!isNaN(saisie)) {
+		saisie = parseFloat(saisie);
+	}
 	return saisie;
 }
 
