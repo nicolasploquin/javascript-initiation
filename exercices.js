@@ -88,6 +88,8 @@ ecrire( Math.min(...[3,9,2,4]) );
 
 function sapin(taille){
     var pied;
+    var largeurPied = Math.floor(taille/10)+1;
+
     for (var i = 1; i <= taille; i++) {
         var branche = "";
         for(var j = 0; j < taille - i; j++){
@@ -97,9 +99,9 @@ function sapin(taille){
             branche = branche + "*";
         }
         ecrire(branche);
-        if(i == Math.floor(taille/10)+1) pied = branche;
+        if(i == largeurPied) pied = branche;
     }
-    for(var j = 0; j < Math.floor(taille/10)+1; j++){
+    for(var j = 0; j < largeurPied; j++){
         ecrire(pied);
     }
 }
@@ -107,3 +109,5 @@ function sapin(taille){
 sapin(3);
 ecrire("");
 sapin(12);
+ecrire();
+sapin(26);
