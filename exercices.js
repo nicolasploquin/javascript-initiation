@@ -97,11 +97,13 @@ function sapin(taille){
             branche = branche + "*";
         }
         ecrire(branche);
-        if(i == 1) pied = branche;
+        if(i == Math.floor(taille/10)+1) pied = branche;
     }
-    ecrire(pied);
+    for(var j = 0; j < Math.floor(taille/10)+1; j++){
+        ecrire(pied);
+    }
 }
 
 sapin(3);
-ecrire();
-sapin(5);
+ecrire("");
+sapin(12);
